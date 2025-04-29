@@ -48,8 +48,7 @@ class Deck_Bulider():
     def Draw_Card(self, Command):
         if len(self.__Deck) == 0: print("Deck is empty, please create a new deck"); return None
         #^ Checks if the deck is empty
-        Card = self.__Deck.pop(0)
-        print(f"You Drew The \033[1m{Card}\033[0m")
+        print(f"You Drew The \033[1m{self.__Deck.pop(0)}\033[0m")
         #^ Draws a card from the deck
     def Format_Command(self, Command):
         if Command == "": return ""
