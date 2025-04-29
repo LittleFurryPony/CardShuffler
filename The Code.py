@@ -77,6 +77,8 @@ class Deck_Bulider():
                         self.__Commands[_input[0]]["Function"](_input)
                     elif self.__Commands[_input[0]]["Limit"] != None and len(_input) == self.__Commands[_input[0]]["Limit"]:
                         self.__Commands[_input[0]]["Function"](_input)
+                    else: print("Invalid Command: Exceeded Limit %a"%(self.__Commands[_input[0]]["Limit"]))
+                else: print("Invalid Command: %a"%(_input[0]))
 
     def Main(self):
         self.Create_Deck(None)
